@@ -38,3 +38,6 @@ h3 { font-size: 1rem; margin: 20px 0 4px; }
 ul { padding-left: 1.3em; }
 .box { border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 16px 0; }
 footer { max-width: 720px; margin: 0 auto; padding: 24px 16px 40px; color: var(--muted); font-size: .8rem; border-top: 1px solid var(--line); }
+a.dl { display: inline-block; padding: 10px 22px; border-radius: 10px; background: var(--accent); color: var(--paper); font-weight: 700; text-decoration: none; }
+a.dl[aria-disabled="true"] { background: var(--line); color: var(--muted); cursor: default; pointer-events: none; }
+.note { color: var(--muted); font-size: .9rem; margin-top: 0; }

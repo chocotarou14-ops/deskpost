@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deskpost for Mac</title>
+<link rel="stylesheet" href="style.css">
+<script>
+// ダウンロード先はここ1か所だけ。配布物ができたら URL を入れる（空のあいだは「準備中」）。
+// Download link lives only here. Leave empty to show "Coming soon".
+const DOWNLOAD_URL = "";
+</script>
+</head>
+<body>
+<header class="site"><nav>
+  <a class="brand" href="./">Deskpost</a>
+  <a href="mac.html">Mac用 / For Mac</a>
+  <a href="privacy.html">プライバシー / Privacy</a>
+  <a href="support.html">サポート / Support</a>
+</nav></header>
+<main>
+
+<section class="lang" lang="ja" id="ja">
+<p class="switch"><a href="#en">English</a></p>
+<h1>Deskpost for Mac</h1>
+<p class="lead">家のMacで動かしておくと、iPhoneの Deskpost からこのMacのファイルを見たり送ったりできるようになるアプリです。</p>
+
+<p><a class="dl" data-ready="ダウンロード" data-wait="準備中" aria-disabled="true">準備中</a></p>
+<p class="note">いまは配布の準備中です。できしだい、このボタンから入手できるようになります。</p>
+
+<h2>入れ方</h2>
+<ol>
+<li>上のボタンからダウンロードします。</li>
+<li>ダウンロードしたファイルを開き、Deskpost を「アプリケーション」フォルダへ入れます。</li>
+<li>Deskpost を開くと、準備の案内が出ます。案内に沿って進めると、iPhoneで読むQRコードが出ます。</li>
+</ol>
+
+<h2>対応</h2>
+<ul>
+<li>Apple シリコンのMac</li>
+<li>macOS 13 以降</li>
+</ul>
+<p>iPhone側の使い方は<a href="support.html">サポート</a>をご覧ください。</p>
+</section>
+
+<section class="lang" lang="en" id="en">
+<p class="switch"><a href="#ja">日本語</a></p>
+<h1>Deskpost for Mac</h1>
+<p class="lead">Keep this app running on your Mac at home, and Deskpost on your iPhone can browse and send the files on this Mac.</p>
+
+<p><a class="dl" data-ready="Download" data-wait="Coming soon" aria-disabled="true">Coming soon</a></p>
+<p class="note">The download is being prepared. It will be available from this button soon.</p>
+
+<h2>How to install</h2>
+<ol>
+<li>Download it with the button above.</li>
+<li>Open the downloaded file and move Deskpost to your Applications folder.</li>
+<li>Open Deskpost. A setup guide appears; follow it, and a QR code for your iPhone is shown.</li>
+</ol>
+
+<h2>Requirements</h2>
+<ul>
+<li>Mac with Apple silicon</li>
+<li>macOS 13 or later</li>
+</ul>
+<p>For using the iPhone app, see <a href="support.html">Support</a>.</p>
+</section>
+
+</main>
+<footer>
+<p>Mac and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions. Deskpost is an independent app and is not affiliated with, authorized, sponsored, or otherwise approved by Apple Inc.</p>
+</footer>
+<script>
+for (const a of document.querySelectorAll("a.dl")) {
+  if (DOWNLOAD_URL) {
+    a.href = DOWNLOAD_URL;
+    a.textContent = a.dataset.ready;
+    a.removeAttribute("aria-disabled");
+  }
+}
+if (DOWNLOAD_URL) for (const n of document.querySelectorAll(".note")) n.hidden = true;
+</script>
+</body>
+</html>
