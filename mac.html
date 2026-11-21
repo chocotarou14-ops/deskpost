@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-title-ja="Deskpost for Mac" data-title-en="Deskpost for Mac">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deskpost for Mac</title>
 <link rel="stylesheet" href="style.css">
+<script src="lang.js"></script>
 <script>
 // ダウンロード先はここ1か所だけ。配布物ができたら URL を入れる（空のあいだは「準備中」）。
 // Download link lives only here. Leave empty to show "Coming soon".
@@ -14,14 +15,14 @@ const DOWNLOAD_URL = "";
 <body>
 <header class="site"><nav>
   <a class="brand" href="./">Deskpost</a>
-  <a href="mac.html">Mac用 / For Mac</a>
-  <a href="privacy.html">プライバシー / Privacy</a>
-  <a href="support.html">サポート / Support</a>
+  <a href="mac.html"><span lang="ja" data-only="ja">Mac用</span><span class="sep"> / </span><span lang="en" data-only="en">For Mac</span></a>
+  <a href="privacy.html"><span lang="ja" data-only="ja">プライバシー</span><span class="sep"> / </span><span lang="en" data-only="en">Privacy</span></a>
+  <a href="support.html"><span lang="ja" data-only="ja">サポート</span><span class="sep"> / </span><span lang="en" data-only="en">Support</span></a>
+  <a id="langswitch" href="#en" lang="en">English</a>
 </nav></header>
 <main>
 
-<section class="lang" lang="ja" id="ja">
-<p class="switch"><a href="#en">English</a></p>
+<section class="lang" lang="ja">
 <h1>Deskpost for Mac</h1>
 <p class="lead">家のMacで動かしておくと、iPhoneの Deskpost からこのMacのファイルを見たり送ったりできるようになるアプリです。</p>
 
@@ -43,8 +44,7 @@ const DOWNLOAD_URL = "";
 <p>iPhone側の使い方は<a href="support.html">サポート</a>をご覧ください。</p>
 </section>
 
-<section class="lang" lang="en" id="en">
-<p class="switch"><a href="#ja">日本語</a></p>
+<section class="lang" lang="en">
 <h1>Deskpost for Mac</h1>
 <p class="lead">Keep this app running on your Mac at home, and Deskpost on your iPhone can browse and send the files on this Mac.</p>
 
