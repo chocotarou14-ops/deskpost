@@ -47,3 +47,97 @@ html[data-lang="ja"] .lang[lang="ja"], html[data-lang="en"] .lang[lang="en"] { d
 html[data-lang="ja"] [data-only="en"], html[data-lang="en"] [data-only="ja"], html[data-lang] .sep { display: none; }
 html:not([data-lang]) #langswitch { display: none; }
 #langswitch { font-size: .9rem; }
+
+/* ===== Mac の入れ方の説明書（mac.html） ===== */
+.facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 14px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: .92rem; }
+.facts b { color: var(--ink); }
+.prompts { border: 1px solid var(--line); border-radius: 14px; padding: 6px 18px 10px; margin: 24px 0; background: color-mix(in srgb, var(--paper) 70%, #fff 30%); }
+@media (prefers-color-scheme: dark) { .prompts { background: color-mix(in srgb, var(--paper) 85%, #fff 15%); } }
+.prompts h2 { border: 0; margin: 10px 0 2px; padding: 0; }
+.prompts > p { margin: 0 0 8px; color: var(--muted); font-size: .92rem; }
+.prompts ol { list-style: none; margin: 0; padding: 0; counter-reset: p; }
+.prompts li { counter-increment: p; display: grid; grid-template-columns: 1.8em minmax(0,1fr) auto; gap: 2px 10px; align-items: baseline; padding: 9px 0; border-top: 1px solid var(--line); }
+.prompts li:first-child { border-top: 0; }
+.prompts li::before { content: counter(p); font-weight: 800; color: var(--muted); }
+.prompts .q { font-weight: 600; }
+.prompts .why { grid-column: 2 / 4; color: var(--muted); font-size: .85rem; }
+.press { display: inline-block; white-space: nowrap; font-size: .85rem; font-weight: 700; padding: 1px 10px; border-radius: 99px; background: #2f80ed; color: #fff; }
+.press.green { background: #3d7a5a; }
+.press.plain { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.prompts li.where { counter-increment: none; display: block; font-size: .8rem; font-weight: 700; color: var(--muted); padding-top: 14px; border-top: 0; }
+.prompts li.where::before { content: none; }
+.step { margin: 40px 0; }
+.step h2 { display: flex; gap: 12px; align-items: baseline; border-top: 1px dashed var(--line); }
+.step h2 .n { font-size: 1.6rem; font-weight: 300; font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #3d7a5a; }
+.step p { margin: 6px 0; }
+figure.shot { position: relative; margin: 14px 0 6px; }
+figure.shot img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+figure.shot.small { max-width: 360px; }
+figure.shot.mid { max-width: 520px; }
+figure.shot .ring { position: absolute; border: 3px solid #e8835f; border-radius: 99px; box-shadow: 0 0 0 4px rgba(232,131,95,.22); pointer-events: none; }
+figcaption { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+.ph { display: grid; place-items: center; aspect-ratio: 16 / 10; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: .85rem; }
+.ok { border-left: 4px solid #3d7a5a; padding: 4px 0 4px 12px; margin: 10px 0; }
+.ok b { color: #3d7a5a; }
+@media (prefers-color-scheme: dark) { .step h2 .n, .ok b { color: #8fc9a6; } .ok { border-left-color: #8fc9a6; } }
+
+@media (max-width: 560px) { .prompts li { grid-template-columns: 1.8em minmax(0,1fr); } .prompts .press { grid-column: 2; justify-self: start; margin-top: 4px; } .prompts .why { grid-column: 2; } }
+.legend { list-style: none; padding: 0; }
+.legend li { display: grid; grid-template-columns: 3.6em minmax(0,1fr); gap: 10px; padding: 6px 0; align-items: baseline; }
+.legend .sym { text-align: center; font-weight: 700; font-size: .85rem; border: 1px solid var(--line); border-radius: 8px; padding: 0 4px; }
+dl.menu { margin: 8px 0; }
+dl.menu dt { font-weight: 700; margin-top: 12px; }
+dl.menu dd { margin: 2px 0 0; color: var(--muted); }
+/* 写真に番号札を付ける：<figure class="shot anno"> の中に <span class="mk" style="left:x%;top:y%">1</span>、下に <ol class="keys"> */
+figure.shot .mk { position: absolute; transform: translate(-50%,-50%); width: 26px; height: 26px; border-radius: 50%; background: #e8835f; color: #fff; font: 700 14px/26px -apple-system, sans-serif; text-align: center; box-shadow: 0 0 0 3px #fff, 0 2px 6px rgba(0,0,0,.25); }
+ol.keys { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 6px 16px; counter-reset: k; }
+ol.keys li { counter-increment: k; display: flex; gap: 8px; align-items: baseline; font-size: .9rem; }
+ol.keys li::before { content: counter(k); flex: none; width: 20px; height: 20px; border-radius: 50%; background: #e8835f; color: #fff; font: 700 12px/20px -apple-system, sans-serif; text-align: center; }
+ol.keys b { white-space: nowrap; }
+/* 流れの帯 */
+.flow { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 6px; margin: 26px 0 8px; }
+.flow .f { text-align: center; font-size: .78rem; line-height: 1.4; color: var(--muted); position: relative; }
+.flow .f svg { display: block; width: 100%; max-width: 92px; height: auto; margin: 0 auto 6px; }
+.flow .f b { display: block; color: var(--ink); font-size: .85rem; }
+.flow .f:not(:last-child)::after { content: "›"; position: absolute; right: -8px; top: 26px; color: var(--line); font-size: 1.6rem; line-height: 1; }
+/* 確認の窓の一覧 */
+.dialogs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px 14px; margin: 14px 0 4px; }
+.dialogs figure { margin: 0; }
+.dialogs .pic { position: relative; }
+.dialogs img { display: block; width: 100%; height: auto; border-radius: 9%/6%; box-shadow: 0 6px 18px rgba(0,0,0,.14); background: #f4f4f4; }
+.dialogs figcaption { margin-top: 8px; font-size: .8rem; color: var(--muted); line-height: 1.45; }
+.dialogs figcaption .press { margin-bottom: 4px; }
+.dialogs .n { font-weight: 800; color: var(--ink); margin-right: 4px; }
+.dialogs .tag { display: inline-block; font-size: .7rem; font-weight: 700; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 0 7px; margin-bottom: 4px; }
+figure .ring { position: absolute; border: 3px solid #e8835f; border-radius: 99px; box-shadow: 0 0 0 4px rgba(232,131,95,.22); pointer-events: none; }
+figure.shot.dlg { max-width: 260px; }
+figure.shot.dlg img { border-radius: 9%/6%; box-shadow: 0 8px 24px rgba(0,0,0,.16); border: 0; }
+@media (max-width: 560px) { .flow { grid-template-columns: repeat(5, minmax(0,1fr)); } .flow .f { font-size: .7rem; } .flow .f:not(:last-child)::after { right: -6px; top: 16px; font-size: 1.2rem; } }
+/* 2版：すっきり */
+.onphone { border: 1px solid #e8835f; background: rgba(232,131,95,.08); border-radius: 12px; padding: 12px 14px; margin: 16px 0; font-size: .92rem; }
+.onphone .sendmac { display: inline-block; margin-left: 8px; font: inherit; font-weight: 700; color: #fff; background: #3d7a5a; border: 0; border-radius: 99px; padding: 3px 14px; }
+.heads { margin: 24px 0 8px; }
+.heads > p { margin: 0 0 10px; }
+.thumbs { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; align-items: end; }
+.thumbs figure { margin: 0; text-align: center; }
+.thumbs img { width: 100%; height: auto; border-radius: 9%/7%; box-shadow: 0 3px 10px rgba(0,0,0,.12); }
+.thumbs figcaption { margin-top: 6px; }
+.thumbs .press { font-size: .72rem; white-space: normal; }
+.pair { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; margin-top: 12px; }
+.pair figure.shot.dlg { flex: 1 1 200px; max-width: 240px; margin: 0; }
+figure .ring.sq { border-radius: 18%; }
+details { border-top: 1px solid var(--line); padding: 10px 0; }
+details:last-of-type { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 700; }
+details ul { margin: 8px 0; }
+/* iPhone で開いた時の上の部分 */
+.onphone { padding: 14px 14px 10px; }
+.onphone .ph-t { margin: 0 0 10px; font-weight: 800; font-size: 1rem; }
+.ph-row { display: flex; align-items: center; gap: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+.ph-row svg { width: 36px; height: 36px; flex: none; }
+.ph-row div { flex: 1; min-width: 0; line-height: 1.35; }
+.ph-row div b { display: block; }
+.ph-row div span { font-size: .85rem; color: var(--muted); }
+.onphone .ph-btn { flex: none; margin: 0; font: inherit; font-size: .9rem; font-weight: 700; color: #fff; background: #3d7a5a; border: 0; border-radius: 99px; padding: 6px 14px; text-decoration: none; }
+.onphone a.ph-btn[aria-disabled="true"] { background: #bdb6a8; }
+.onphone .ph-n { margin: 8px 2px 0; font-size: .82rem; color: var(--muted); }
