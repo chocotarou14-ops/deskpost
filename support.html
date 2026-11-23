@@ -28,21 +28,21 @@
 <ol>
 <li>Macに「<a href="mac.html">Deskpost for Mac</a>」を入れて起動します。</li>
 <li>iPhoneで Deskpost を開き、Macのメニューに出るQRコードを読み取ります。</li>
-<li>同じWi‑Fiにいれば、次からは自動でつながります。</li>
+<li>次からは自動でつながります。家の外からも、モバイル回線などで接続できます。</li>
 </ol>
 <p>Macが無くても、初めの画面の「見本で試す」で操作を試せます。</p>
 
 <h2>よくある質問</h2>
 <h3>つながりません</h3>
 <ul>
-<li>iPhoneとMacが同じWi‑Fiにつながっているか確かめてください。</li>
+<li>家の中では、iPhoneとMacが同じWi‑Fiにつながっているか確かめてください。家の外からの時は、Macがインターネットにつながっているか確かめてください。</li>
 <li>iPhoneの「設定」で Deskpost の「ローカルネットワーク」がオンになっているか確かめてください。</li>
 <li>Mac側アプリが起動しているか、Macがスリープしていないか確かめてください。</li>
 </ul>
 <h3>外出先から使えますか</h3>
-<p>iPhoneとMacの両方に Tailscale を入れて同じアカウントで使っている場合は、外出先からもつながります（任意）。</p>
+<p>はい。家で一度QRコードを読めば、外出先からもモバイル回線などを使って接続できます。接続するには、Macの電源が入っていて、スリープしておらず、インターネットに接続されている必要があります。直接つながらない時は、開発者が用意した中継サーバーを通ります（中継サーバーは通信の中身を読めません）。iPhoneとMacの両方で Tailscale を使っている場合は、Tailscale 経由でもつながります。</p>
 <h3>ファイルはどこかに送られますか</h3>
-<p>いいえ。ファイルは利用者のiPhoneとMacの間だけでやりとりされます。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+<p>いいえ。ファイルはあなたのiPhoneとMacの間でやりとりされます。家の外から中継サーバーを通る時も、通信は暗号化されていて、中継サーバーは中身を読めません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
 <h3>つながるiPhoneを変えたい・つながらないようにしたい</h3>
 <p>Mac側アプリのメニューで合言葉を作り直すと、それまでのiPhoneはつながらなくなります。</p>
 </section>
@@ -58,21 +58,21 @@
 <ol>
 <li>Install and open “<a href="mac.html">Deskpost for Mac</a>” on your Mac.</li>
 <li>Open Deskpost on your iPhone and scan the QR code shown in the Mac app’s menu.</li>
-<li>From then on, it connects automatically whenever both are on the same Wi‑Fi.</li>
+<li>From then on, it connects automatically. You can also connect from outside your home over cellular or another network.</li>
 </ol>
 <p>No Mac yet? Tap “Try with Sample” on the first screen to explore the app.</p>
 
 <h2>FAQ</h2>
 <h3>It won’t connect</h3>
 <ul>
-<li>Make sure your iPhone and Mac are on the same Wi‑Fi network.</li>
+<li>At home, make sure your iPhone and Mac are on the same Wi‑Fi network. When you’re away, make sure your Mac is connected to the internet.</li>
 <li>In the iPhone Settings app, make sure Local Network is turned on for Deskpost.</li>
 <li>Make sure the Mac app is running and your Mac is not asleep.</li>
 </ul>
 <h3>Can I use it away from home?</h3>
-<p>Yes, optionally — if you use Tailscale on both your iPhone and your Mac with the same account.</p>
+<p>Yes. After you scan the QR code at home, you can connect while away using cellular or another network. Your Mac needs to be powered on, awake, and connected to the internet. If a direct connection isn’t possible, traffic goes through a relay server operated by the developer, which can’t read its contents. If you use Tailscale on both your iPhone and Mac, you can also connect through Tailscale.</p>
 <h3>Are my files sent anywhere?</h3>
-<p>No. Files travel only between your iPhone and your Mac. See the <a href="privacy.html">Privacy Policy</a>.</p>
+<p>No. Files are transferred between your iPhone and Mac. Even when traffic goes through the relay server from outside your home, it is encrypted and the relay can’t read it. See the <a href="privacy.html">Privacy Policy</a>.</p>
 <h3>How do I disconnect an iPhone?</h3>
 <p>Create a new passcode in the Mac app’s menu. Any previously paired iPhone will no longer be able to connect.</p>
 </section>
