@@ -19,26 +19,27 @@
 
 <section class="lang" lang="ja">
 <h1>プライバシーポリシー</h1>
-<p class="lead">制定日：2026年11月20日</p>
+<p class="lead">制定日：2026年11月20日<br>改定日：2026年11月23日</p>
 
 <p>このポリシーは、iPhone用アプリ「Deskpost」と、組み合わせて使うMac用アプリ「Deskpost for Mac」（以下まとめて「本アプリ」）での情報の扱いを説明します。</p>
 
 <div class="box">
 <strong>まとめ</strong>
 <ul>
-<li>本アプリは、開発者に情報を送りません。開発者はサーバーを持っていません。</li>
-<li>ファイルは、利用者自身のiPhoneと利用者自身のMacの間だけで直接やりとりされます。</li>
+<li>開発者は、利用者の情報やファイルを集めません。</li>
+<li>ファイルは、あなたのiPhoneとMacの間でやりとりされます。</li>
+<li>家の外から接続する時は、開発者が用意した中継サーバーを通ることがあります。中継サーバーは通信の中身を読めず、接続の記録を保存しません。</li>
 <li>利用状況の解析、広告、トラッキングは一切行いません。アカウント登録もありません。</li>
 </ul>
 </div>
 
 <h2>1. 開発者が集める情報</h2>
-<p>ありません。本アプリには、利用状況の解析、広告、クラッシュ収集などの外部の仕組み（SDK）は入っていません。氏名・メールアドレス・位置情報・端末の識別子などを開発者が受け取ることはありません。</p>
+<p>ありません。本アプリには、利用状況の解析、広告、クラッシュ収集などの外部の仕組み（SDK）は入っていません。氏名・メールアドレス・位置情報などを開発者が受け取ることはありません。家の外から接続する時に中継サーバーが扱う情報は、「3. 通信について」のとおりです。</p>
 
 <h2>2. 本アプリの中で扱う情報と、その置き場所</h2>
 <p>次の情報は、利用者のiPhoneまたはMacの中だけに保存されます。開発者を含め、第三者には送られません。</p>
 <ul>
-<li><strong>つなぎ先の情報</strong>：Macの名前、Macを見分けるための番号、合言葉（iPhoneのキーチェーンに保存）、最後につながったアドレス。</li>
+<li><strong>つなぎ先の情報</strong>：Macの名前、Macを見分けるための番号、合言葉（iPhoneのキーチェーンに保存）、最後につながったアドレス、家の外から接続するための中継サーバーの住所と、iPhoneとMacを見分けるための鍵。</li>
 <li><strong>Macのファイル</strong>：利用者が開いたり保存したりしたファイルと、その縮小画像。iPhoneの中の本アプリ用の場所（「ファイル」アプリから見える場所を含む）に置かれます。</li>
 <li><strong>iPhoneからMacへ送るファイル</strong>：利用者が選んだファイルだけが、利用者のMacへ直接送られます。</li>
 <li><strong>iPhoneの中のフォルダ</strong>：利用者が選んだフォルダだけを、iPhoneの中で読みます。</li>
@@ -46,10 +47,11 @@
 </ul>
 
 <h2>3. 通信について</h2>
-<p>iPhoneとMacは、次のどちらかで直接つながります。開発者のサーバーを経由することはありません。</p>
+<p>iPhoneとMacは、次のどれかでつながります。</p>
 <ul>
 <li><strong>家の中</strong>：同じWi‑Fi（ローカルネットワーク）の中で、iPhoneがMacを見つけてつながります。</li>
-<li><strong>外出先（任意）</strong>：利用者がTailscaleを入れている場合だけ、利用者自身のTailscaleのネットワークを通ってつながります。Tailscaleは利用者が自分で入れて使う第三者のサービスで、その扱いはTailscale社の方針に従います。本アプリがTailscale社に情報を送ることはありません。</li>
+<li><strong>家の外から接続する場合</strong>：モバイル回線など、家の外のネットワークから接続する時は、iPhoneとMacの間で通信を暗号化します（QUIC／TLS 1.3）。可能な場合は端末どうしが直接つながり、直接つながらない場合に限り、開発者が用意した中継サーバー（relay.deskpost.net）を通ります。このサーバーは、開発者がさくらインターネットのVPSを借りて運用しています。中継サーバーは通信の中身を読めません。中継に必要な情報として、IPアドレス、接続時刻、通信量、iPhoneとMacを見分けるための公開鍵が見えます。これらの情報は中継している間だけ使い、保存しません。サーバーには不具合の警告とエラーだけを記録し、その記録に利用者のIPアドレスや公開鍵は含まれません。また、サーバーの防火壁が外から届いた通信を止めた時は、その相手のIPアドレスが記録に残ることがあります。サーバーの記録は14日で自動的に消えます。</li>
+<li><strong>Tailscale（任意）</strong>：利用者がTailscaleを入れている場合は、利用者自身のTailscaleのネットワークを通ってつながります。Tailscaleは利用者が自分で入れて使う第三者のサービスで、その扱いはTailscale社の方針に従います。本アプリがTailscale社に情報を送ることはありません。</li>
 </ul>
 <p>Mac側アプリは、合言葉を知っているiPhoneにだけ応じます。扱えるのはMacの利用者のホームフォルダの中だけで、ライブラリなど一部の場所は扱いません。</p>
 
@@ -63,14 +65,14 @@
 
 <h2>5. 保存期間と削除</h2>
 <ul>
-<li>本アプリの情報は、利用者が消すまでiPhoneまたはMacの中に残ります。開発者の手元には何も残りません。</li>
+<li>本アプリの情報は、利用者が消すまでiPhoneまたはMacの中に残ります。開発者の手元には、利用者の情報やファイルは残りません（中継サーバーの扱いは「3. 通信について」のとおりです）。</li>
 <li>iPhoneから本アプリを削除すると、本アプリが保存したファイルと設定は消えます（キーチェーンの合言葉も、つなぎ直しの時に上書きされます）。</li>
 <li>Mac側アプリで合言葉を作り直すと、それまでのiPhoneはつながらなくなります。</li>
 <li>開発者は情報を持っていないため、開発者に削除を求めていただく必要はありません。</li>
 </ul>
 
 <h2>6. 第三者への提供</h2>
-<p>開発者は情報を受け取らないため、第三者に提供することもありません。</p>
+<p>開発者は、利用者の情報を第三者に提供しません。中継サーバーは、さくらインターネット株式会社のサーバーの上で動いています。</p>
 
 <h2>7. 子どもの情報</h2>
 <p>本アプリは、年齢を問わず情報を集めません。</p>
@@ -84,26 +86,27 @@
 
 <section class="lang" lang="en">
 <h1>Privacy Policy</h1>
-<p class="lead">Effective: November 20, 2026</p>
+<p class="lead">Effective: November 20, 2026<br>Revised: November 23, 2026</p>
 
 <p>This policy explains how the iPhone app “Deskpost” and its companion app “Deskpost for Mac” (together, “the App”) handle information.</p>
 
 <div class="box">
 <strong>Summary</strong>
 <ul>
-<li>The App does not send any information to the developer. The developer does not operate any servers.</li>
-<li>Files travel only between your own iPhone and your own Mac, directly.</li>
+<li>The developer does not collect your information or files.</li>
+<li>Files are transferred between your iPhone and Mac.</li>
+<li>When you connect from outside your home, traffic may pass through a relay server operated by the developer. The relay cannot read the contents and does not store connection logs.</li>
 <li>No analytics, no advertising, no tracking, and no account sign-up.</li>
 </ul>
 </div>
 
 <h2>1. Information the developer collects</h2>
-<p>None. The App contains no third-party SDKs for analytics, advertising, or crash reporting. The developer never receives your name, email address, location, device identifiers, or any other information.</p>
+<p>None. The App contains no third-party SDKs for analytics, advertising, or crash reporting. The developer never receives your name, email address, or location. For what the relay server handles when you connect from outside your home, see “3. Network connections”.</p>
 
 <h2>2. Information handled inside the App, and where it is stored</h2>
 <p>The following information is stored only on your iPhone or your Mac. It is not sent to the developer or to any third party.</p>
 <ul>
-<li><strong>Connection details</strong>: the name of your Mac, an identifier for your Mac, a shared passcode (stored in the iPhone Keychain), and the last address that worked.</li>
+<li><strong>Connection details</strong>: the name of your Mac, an identifier for your Mac, a shared passcode (stored in the iPhone Keychain), the last address that worked, and, for connecting from outside your home, the relay server address and the keys that identify your iPhone and Mac.</li>
 <li><strong>Files from your Mac</strong>: files you open or save, and their thumbnails. They are kept in the App’s own storage on your iPhone (including the area visible in the Files app).</li>
 <li><strong>Files you send from iPhone to Mac</strong>: only the files you choose are sent, directly to your Mac.</li>
 <li><strong>Folders on your iPhone</strong>: only folders you choose are read, on your iPhone.</li>
@@ -111,10 +114,11 @@
 </ul>
 
 <h2>3. Network connections</h2>
-<p>Your iPhone connects directly to your Mac in one of the following ways. No developer server is involved.</p>
+<p>Your iPhone connects to your Mac in one of the following ways.</p>
 <ul>
 <li><strong>At home</strong>: on the same Wi‑Fi (local network), your iPhone finds your Mac and connects to it.</li>
-<li><strong>Away from home (optional)</strong>: only if you use Tailscale, the connection goes through your own Tailscale network. Tailscale is a third-party service that you install and use yourself, and it is governed by Tailscale’s own policies. The App does not send any information to Tailscale.</li>
+<li><strong>Connecting from outside your home</strong>: When you connect over cellular or another network outside your home, your iPhone and Mac communicate with end-to-end encryption (QUIC / TLS 1.3). They connect directly when possible. If a direct connection isn’t possible, traffic goes through a relay server operated by the developer at relay.deskpost.net. The developer rents the server from SAKURA internet. The relay cannot read the contents of the communication. It can see the IP addresses, connection times, data volume, and public keys used to identify your iPhone and Mac. This information is used only while relaying the connection and is not stored. The server logs only warnings and errors, and these logs do not include your IP address or public keys. When the server’s firewall blocks incoming traffic, the sender’s IP address may be logged. Server logs are automatically deleted after 14 days.</li>
+<li><strong>Tailscale (optional)</strong>: if you use Tailscale, the connection can also go through your own Tailscale network. Tailscale is a third-party service that you install and use yourself, and it is governed by Tailscale’s own policies. The App does not send any information to Tailscale.</li>
 </ul>
 <p>The Mac app responds only to an iPhone that knows the shared passcode. It serves only files inside the Mac user’s home folder, excluding certain locations such as Library.</p>
 
@@ -128,14 +132,14 @@
 
 <h2>5. Retention and deletion</h2>
 <ul>
-<li>Information stays on your iPhone or Mac until you delete it. Nothing is kept by the developer.</li>
+<li>Information stays on your iPhone or Mac until you delete it. The developer does not keep your information or files (for the relay server, see “3. Network connections”).</li>
 <li>Deleting the App from your iPhone removes the files and settings it stored (the Keychain passcode is overwritten when you pair again).</li>
 <li>Creating a new passcode in the Mac app disconnects any previously paired iPhone.</li>
 <li>Because the developer holds no information about you, there is nothing to request for deletion.</li>
 </ul>
 
 <h2>6. Sharing with third parties</h2>
-<p>The developer does not receive any information, so nothing is shared with third parties.</p>
+<p>The developer does not share your information with third parties. The relay server runs on servers provided by SAKURA internet Inc.</p>
 
 <h2>7. Children</h2>
 <p>The App does not collect information from anyone, including children.</p>
